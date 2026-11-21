@@ -4,7 +4,7 @@
 #- Input: "[10, 25, 8, 45, 32, 15]"
 #- Output: "45"
 a=[10, 25, 8, 45, 32, 15]
-l=-100000000
+l=a[0]
 for each in a:
     if(each>l):
         l=each
@@ -46,16 +46,16 @@ else:
 #Example:
 #- Input: "5"
 #- Output: "120"
-def fact(n):
-    if(n==1):
-        return 1
-    return n*fact(n-1)
-print(fact(5))
+n=int(input("enter number:"))
+fact=1
+for i in range(n,0,-1):
+    fact*=i
+print(fact)
 #Q5. Reverse an Integer
 #Example:
 #- Input: "12345"
 #- Output: "54321"
-n=int(input("enter the number:"))
+n=abs(int(input("enter the number:")))
 rev=0
 while(n>0):
     last_d=n%10
@@ -66,12 +66,13 @@ print(rev)
 #Example:
 #- Input: "12, 18"
 #- Output: "6"
-n1=12
-n2=18
-for i in range(12,0,-1):
+'''n1=int(input("enter the number1:"))
+n2=int(input("enter the number2:"))
+n=min(n1,n2)
+for i in range(n,0,-1):
     if(n1%i==0 and n2%i==0):
         print(i)
-        break
+        break'''
 #Q7. Check if a String Contains Only Digits
 #Example:
 #- Input: ""123456""
@@ -100,22 +101,19 @@ for ch in s:
     u+=b
 print(u)
 #2nd approach
-s="infosys"
+s=input("enter")
 u=""
 for ch in s:
     if(ch>="a" and ch<="z"):
         u+=chr(ord(ch)-32)
+    else:
+        u+=ch
 print(u)
 
 #Q10. Find the Union of Two Arrays
 #Example:
 #- Input: "arr1 = [1, 2, 3]", "arr2 = [2, 3, 4]"
 #- Output: "[1, 2, 3, 4]"
-arr1 = [1, 2, 3]
-arr2 = [2, 3, 4]
-a=set(arr1)
-b=set(arr2)
-print(list(a.union(b)))
 #2nd approach
 arr1=[1,2,3]
 arr2=[2,3,4]
@@ -145,3 +143,4 @@ for num in arr1:
         if(num not in union):
            union.append(num)
 print(union)
+   
