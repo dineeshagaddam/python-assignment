@@ -61,6 +61,16 @@ for i in range(len(a)):
             print(i)
     elif a[i]>a[i+1] and a[i]>a[i-1]:
         print(i)
+#binary search
+l=0
+r=len(a)-1
+while(l<r):
+    mid=(l+r)//2
+    if(a[mid]>a[mid+1]):
+        r=mid
+    else:
+        l=mid+1
+print(l,a[l])
 #count no of set bits in an integer 
 #given an non negative integer count the number of 1s in its binary representation
 #input=29
@@ -76,7 +86,7 @@ print(count)
 #chech whwather number is an armstrong
 #input=153
 #output=True
-'''n=int(input("enter the number:"))
+n=int(input("enter the number:"))
 temp=n
 pw=len(str(n))
 sum=0
@@ -87,7 +97,7 @@ while(n>0):
 if(temp==sum):
     print("True")
 else:
-    print("false")'''
+    print("false")
 #sum of array elements using recursion
 #given an array of integers calculate  the sum of all elments using a recursive function without using loops
 #input=[1,2,3,4,5]
