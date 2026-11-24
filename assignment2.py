@@ -4,14 +4,16 @@
 #output:10
 a=[12,13,1,10,34]
 f_s=a[0]
-for i in a:
-    if(i<f_s):
-        f_s=i
 s_s=a[0]
 for i in a:
-    if(i>f_s and i<s_s):
-        s_s=i
+   if(i<f_s):
+       f_s=i
+       s_s=a[0]
+   elif(i<s_s):
+       s_s=i
 print(s_s)
+
+
 #find majority element 
 #given an array of size N find the element that appears more than n/2 times assume it always exists
 #input=[2,2,1,1,1,2,2]
@@ -64,18 +66,17 @@ for i in range(len(a)):
 #input=29
 #output=4
 n=int(input("enter the number"))
-l=[]
+count=0
 while n>0:
-  new_d=n//2
   r=n%2
-  l.append(r)
-  n=new_d
-b=l.count(1)
-print(b)
+  if r==1:
+      count+=1
+  n=n//2
+print(count)
 #chech whwather number is an armstrong
 #input=153
 #output=True
-n=int(input("enter the number:"))
+'''n=int(input("enter the number:"))
 temp=n
 pw=len(str(n))
 sum=0
@@ -86,14 +87,18 @@ while(n>0):
 if(temp==sum):
     print("True")
 else:
-    print("false")
+    print("false")'''
 #sum of array elements using recursion
 #given an array of integers calculate  the sum of all elments using a recursive function without using loops
 #input=[1,2,3,4,5]
 #output=15
 ar=[1,2,3,4,5]
-from functools import reduce
-print(reduce(lambda x,y:x+y,ar))
+def sums(ar,n):
+    if n==0:
+        return 0
+    return ar[n-1]+sums(ar,n-1)
+ar=[1,2,3,4,5]
+print(sums(ar,len(ar)))
 #find the longest word in a sentence
 #given a sentence find the longest word if multiple words have the same max length return the first one encountered
 #input="infosys hires specialist programmers"
@@ -109,8 +114,3 @@ for each in b:
     if(maxi==len(each)):
         print(each)
         break
-
-
-
-
-
