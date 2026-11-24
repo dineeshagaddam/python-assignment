@@ -3,11 +3,11 @@
 #Examples:#Input: "hello" → Output: "olleh"
 #Input: "python" → Output: "nohtyp"
 #Input: "12345" → Output: "54321" 
-'''s=input("enter the strig:")
+s=input("enter the strig:")
 rev=''
 for ch in s:
     rev=ch+rev
-print(rev)'''
+print(rev)
 # Q2. Check Whether a String Is a Palindrome Problem Statement:
 #Given a string, check whether it is a palindrome or not. A string is called a palindrome if it reads the same forward and backward.
 #Examples:
@@ -15,14 +15,14 @@ print(rev)'''
 #Input: "level" → Output: Palindrome
 #Input: "hello" → Output: Not a Palindrome
 #Input: "121" → Output: Palindrome
-'''s=input("enter the string:")
+s=input("enter the string:")
 rev=""
 for ch in s:
     rev=ch+rev
 if rev==s:
     print("palindrome")
 else:
-    print("not a palindrome")'''
+    print("not a palindrome"
 #  Q3. Count Vowels and Consonants in a String Problem Statement:
 #Given a string, count the number of vowels and consonants present in it.
 #Vowels: a, e, i, o, u
@@ -38,9 +38,7 @@ consonants=0
 for ch in s:
     if(ch  in v):
         vowels+=1
-        print(ch,end=" ")
     elif ch in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ":
         consonants+=1
-        print(ch,end=" ")
 print(vowels)
 print(consonants)
