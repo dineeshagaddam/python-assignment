@@ -42,3 +42,37 @@ for ch in s:
         consonants+=1
 print(vowels)
 print(consonants)
+#find difference between largest and smallest element
+a=[10,5,25,8,15]
+l=a[0]
+s=a[0]
+for i in a:
+    if(i>l):
+        l=i
+    elif(i<s):
+        s=i
+print(l-s)
+#move all zeros to end
+a=[1,0,8,0,9,4,0]
+l=0
+r=0
+for i in range(len(a)):
+    if(a[r]!=0):
+        a[l],a[r]=a[r],a[l]
+        l+=1
+        r+=1
+    else:
+        r+=1
+print(a)
+# 2nd approach 
+a=[1,0,8,0,9,4,0]
+l=[]
+count=0
+for i in a:
+    if(i!=0):
+        l.append(i)
+    else:
+        count+=1
+for i in range(count):
+    l.append(0)
+print(l)
